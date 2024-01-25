@@ -26,7 +26,9 @@ That feeling of opening the metaphorical black box of fluids, locked with our li
 You've probably been exposed to the Navier-Stokes equations in some way or another if you're reading this article. It's typically introduced as the "big scary equations" of fluids, followed by a break down of the components which make up the equations. I will just display them below for reference (and because this tutorial would feel incomplete without seeing them in full form), but we're going to be deriving them ourselves from basic principles.
 
 $$
-\nabla \cdot \mathbf{u} = 0
 
-\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}
+\[nabla \cdot \mathbf{u} = 0]
+
+\[frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}]
+
 $$
