@@ -31,3 +31,22 @@ $$
 
 \frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}
 $$
+
+
+
+\begin{aligned}
+\displaystyle
+\int_{\Omega}  \nabla \boldsymbol{\phi} : \nabla\boldsymbol{\psi} = 
+\int_{\Omega}\Big( (\nabla\times \boldsymbol{\phi}) \cdot (\nabla\times \boldsymbol{\psi}) + (\nabla 
+\cdot 
+\boldsymbol{\phi}) (\nabla \cdot \boldsymbol{\psi}) \Big)
+\\
+\displaystyle
+\quad + \int_{\partial \Omega} 
+\Big( \underbrace{\nabla_{\Gamma}(\boldsymbol{n}\cdot \boldsymbol{\phi}_n)\cdot 
+\boldsymbol{\psi}_{\Gamma}}_{\text{tangential}} - 
+\underbrace{(\nabla\cdot\boldsymbol{\phi}_{\Gamma})(\boldsymbol{n}\cdot\boldsymbol{\psi}_{n})}_{\text{normal}}
+\Big).
+\tag{$\ast$}\label{eq:multi}
+
+\end{aligned}
