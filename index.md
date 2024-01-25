@@ -5,7 +5,7 @@ subtitle: A Computer Scientist's Guide To Fluid Mechanics
 ---
 
 ### Preface
-My goal in writing this article is to provide a gentle introduction to fluid simulations for the average computer science student at undergraduate or postgraduate level. No background in fluid mechanics or numerical methods is required. I only expect you to have solid calculus foundations and some exposure to vector calculus. But not to worry, I will provide additional clarification as needed.
+My goal in writing this article is to provide a gentle introduction to fluid simulations for the average computer science student at undergraduate or postgraduate level. No background in fluid mechanics or numerical methods is required. I only expect you to have solid calculus foundations, some basic physics knowledge and any amount of exposure to vector calculus. But not to worry, I will provide additional clarification as needed.
 
 ### Introduction
 Hello, I am Sharjeel Qaiser. I'm currently working at Creative Assembly as a graphics and VFX programmer. Before I joined the video games industry, I was always interested in simulating the real world - especially fluids, since they are just mesmerizing to look at. So I did what everyone else does and googled "fluid simulation tutorial", which made me stumble across a handful of nice articles on Medium, Nvidia's GPU gems article on simulating fluids, the godfather of fluids Jos Stam's work, the classic SPH paper and the fantastic book "Fluid Simulation for Computer Graphics" by Robert Bridson. All of these are fantastic resources in their own right, which provide great intuition and guide you through practical implementations of fluid solvers. 
@@ -21,5 +21,12 @@ Somewhere along the line of doing that and solving a few textbook fluid problems
 
 That feeling of opening the metaphorical black box of fluids, locked with our limited exposure to real-world engineering is an extremely satisfying feeling, which I hope to impart on you through a couple of articles. I won't be guiding you through how to actually write a fluid solver with code in this first article, perhaps I'll save it for a later one (there's plenty of resources that do that already). But I'd like to motivate you, make it intuitive so that you are curious to learn more, because that is what I needed as well. Perhaps I can even convince you to go through a fluid mechanics course on your own by yourself!
 
+### Navier-Stokes Equations
 
 You've probably been exposed to the Navier-Stokes equations in some way or another if you're reading this article. It's typically introduced as the "big scary equations" of fluids, followed by a break down of the components which make up the equations. I will just display them below for reference (and because this tutorial would feel incomplete without seeing them in full form), but we're going to be deriving them ourselves from basic principles.
+
+$$
+\nabla \cdot \mathbf{u} = 0
+
+\frac{\partial \mathbf{u}}{\partial t} + (\mathbf{u} \cdot \nabla) \mathbf{u} = -\frac{1}{\rho} \nabla p + \nu \nabla^2 \mathbf{u} + \mathbf{f}
+$$
